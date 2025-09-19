@@ -9,6 +9,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: linear-gradient();
 }
 
 header, footer {
@@ -17,29 +18,30 @@ header, footer {
     color: #FFFFFF;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 20px;
 }
+
 main{
    flex-grow: 1;
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: #DA6062;
-   flex-grow: 1;
-   display: flex
+   background-color: #da6062d2;
+ 
 }
 
-header{
+header {
     height: 100px;
     display: flex;
     align-items: center;
     gap: 24px;
     color: #FFFFFF;
     padding-left: 75px;
+    background: linear-gradient(to bottom, red, #DA6062);
 }
 
-header span{
+header span {
     font-weight: 600;
 }
 
@@ -53,6 +55,14 @@ header span{
     right: 0;
     bottom: 0;
     z-index: -1;
+    
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-text{
@@ -61,11 +71,12 @@ header span{
     font-size: 2.5rem;
     width: 240px;
     transform: translateX(-100%);
-    text-align: end;
+    
 }
-
-.content-text{
+.content-image{
     height: 85vh;
+    position: absolute;
+    filter: drop-shadow(15px 30px 5px rgb(0, 0, 0, 0.5));
 }
 
 footer{
@@ -77,7 +88,30 @@ footer{
     padding-left: 75px;
     color: #FFFFFF;
     font-weight: 100;
+    background: linear-gradient(to bottom, #da6062d2, rgba(255, 0, 0, 0.844));
 }
 footer div{
     width: 64px;
+}
+
+@media (max-width: 768px){
+    header{
+        padding-left: 25px;
+    }
+
+    .content-text{
+        transform: translateX(0%);
+        top: 80px;
+        font-size: 1rem;
+        width: 100px;
+        text-align: center;
+    }
+
+    .content-image{
+        height: 70vh;
+    }
+    
+    footer{
+        padding: 0px 25px;
+    }
 }
